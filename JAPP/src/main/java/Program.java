@@ -1,3 +1,4 @@
+import Share.Entry;
 import World.Module.Log.Log;
 
 public class Program {
