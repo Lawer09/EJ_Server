@@ -1,31 +1,43 @@
 package World;
 
-
-import MObject.DisposeObject;
-
-
-
-
-public abstract class Singleton<T extends Singleton<T>> extends ASingleton{
-
+public abstract class Singleton extends ASingleton {
 
     private boolean isDisposed;
 
-    private static Singleton<?> instance;
+    private static Singleton instance;
 
-    public static Singleton<?> Instance()
+    public static Singleton GetInstance()
     {
         return instance;
     }
 
+    private static void SetInstance(Singleton instance)
+    {
+    }
 
     @Override
-    void Register() {
+    public void Register() {
         instance = this;
     }
 
+    public boolean IsDisposed(){
+        return this.isDisposed;
+    }
 
+    protected void Destroy()
+    {
 
+    }
 
-
+    @Override
+    public void Dispose()
+    {
+        if(this.isDisposed)
+        {
+            return;
+        }
+        this.isDisposed = true;
+        this.Destroy();
+        SetInstance(null);
+    }
 }

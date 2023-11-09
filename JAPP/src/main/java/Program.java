@@ -3,13 +3,12 @@ import World.Module.Log.Log;
 
 public class Program {
 
-
     public static void main(String[] args) {
 
         Entry.Init();
 
         Init init = new Init();
-        init.Start();
+        init.Start(args);
 
         while (true)
         {

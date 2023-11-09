@@ -3,7 +3,7 @@ package World.Module.IdGenerator;
 import World.ISingletonAwake;
 import World.Singleton;
 
-public class IdGenerator extends Singleton<IdGenerator> implements ISingletonAwake {
+public class IdGenerator extends Singleton implements ISingletonAwake {
     public static final int MaxZone = 1024;
 
     public static final int Mask14bit = 0x3fff;
