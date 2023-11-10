@@ -7,7 +7,7 @@ import java.util.Objects;
 import java.util.function.Consumer;
 
 public class CLParser<T> {
-    private static CommandLineParser defaultParser = new DefaultParser();
+    private final static CommandLineParser defaultParser = new DefaultParser();
 
     private Consumer<String> error;
     private Consumer<T> result;

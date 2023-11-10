@@ -1,5 +1,6 @@
 import Share.Entry;
 import World.Module.Log.Log;
+import World.Module.Log.Logger;
 
 public class Program {
 
@@ -23,7 +24,7 @@ public class Program {
                 throw new RuntimeException(e);
             } catch (Exception e)
             {
-                Log.Error(e);
+                Log.Error(e.getMessage());
             }
         }
     }

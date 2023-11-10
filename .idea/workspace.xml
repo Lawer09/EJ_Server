@@ -4,22 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b3d2378-ac06-4b25-b64a-0189de5d2e56" name="Changes" comment="add JAPP - Program">
-      <change afterPath="$PROJECT_DIR$/JCore/src/main/java/World/Module/Options/AppType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JCore/src/main/java/World/Module/Options/CLParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JCore/src/main/java/World/Module/Options/JOption.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JCore/src/main/java/World/Module/Options/JOptions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1b3d2378-ac06-4b25-b64a-0189de5d2e56" name="Changes" comment="Init 初步完成">
+      <change afterPath="$PROJECT_DIR$/JCore/src/main/java/Core/ThreadSynchronizationContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JCore/src/main/java/World/Module/Fiber/Fiber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JCore/src/main/java/World/Module/Fiber/FiberHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JCore/src/main/java/World/Module/Fiber/FiberManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JCore/src/main/java/World/Module/Fiber/IScheduler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JCore/src/main/java/World/Module/Fiber/MainThreadScheduler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JCore/src/main/java/World/Module/Fiber/SchedulerType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JCore/src/main/java/World/Module/Log/ILog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JCore/src/main/java/World/Module/Log/Logger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JCore/src/main/java/World/Module/Log/NLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JCore/src/main/java/World/Module/TimeInfo/TimeInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JLoader/src/main/java/Loader/CodeLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAPP/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JAPP/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JAPP/src/main/java/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/JAPP/src/main/java/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JCore/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JCore/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JCore/src/main/java/MObject/DisposeObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/JCore/src/main/java/MObject/DisposeObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JCore/src/main/java/World/Module/IdGenerator/IdGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/JCore/src/main/java/World/Module/IdGenerator/IdGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JCore/src/main/java/IDisposable.java" beforeDir="false" afterPath="$PROJECT_DIR$/JCore/src/main/java/Core/IDisposable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JCore/src/main/java/World/Module/Log/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/JCore/src/main/java/World/Module/Log/Log.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JCore/src/main/java/World/Module/Options/CLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/JCore/src/main/java/World/Module/Options/CLParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JCore/src/main/java/World/Singleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/JCore/src/main/java/World/Singleton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JLoader/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JLoader/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JLoader/src/main/java/Init.java" beforeDir="false" afterPath="$PROJECT_DIR$/JLoader/src/main/java/Init.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JModel/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JModel/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,10 +33,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="AnnotationType" />
-        <option value="Class" />
+        <option value="Enum" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -42,9 +46,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2XfQ7pD1ccwOGwUqAMr9N9N0bsV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -53,25 +57,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/Moon/Desktop/order/java/student-master/EJ_Server/JModel",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Moon/Desktop/order/java/student-master/EJ_Server/JModel&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
@@ -129,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699020792188</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="启动参数解析初步完成">
+      <option name="closed" value="true" />
+      <created>1699546043288</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699546043288</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,7 +173,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create" />
     <MESSAGE value="add JAPP - Program" />
-    <option name="LAST_COMMIT_MESSAGE" value="add JAPP - Program" />
+    <MESSAGE value="启动参数解析初步完成" />
+    <MESSAGE value="Init 初步完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init 初步完成" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

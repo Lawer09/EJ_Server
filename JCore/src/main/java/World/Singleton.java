@@ -11,13 +11,14 @@ public abstract class Singleton extends ASingleton {
         return instance;
     }
 
-    private static void SetInstance(Singleton instance)
+    private static void SetInstance(Singleton singleton)
     {
+        instance = singleton;
     }
 
     @Override
     public void Register() {
-        instance = this;
+        SetInstance(this);
     }
 
     public boolean IsDisposed(){

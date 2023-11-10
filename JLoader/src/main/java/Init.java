@@ -1,10 +1,16 @@
-import World.Module.Log.Log;
+import Loader.CodeLoader;
+import World.Module.Fiber.FiberManager;
+import World.Module.Log.Logger;
+import World.Module.Log.NLog;
 import World.Module.Options.CLParser;
 import World.Module.Options.JOptions;
+import World.Module.TimeInfo.TimeInfo;
 import World.World;
+import org.apache.commons.cli.Options;
+
+import java.sql.Time;
 
 public class Init {
-
 
     public void Start(String[] args)
     {
@@ -14,7 +20,8 @@ public class Init {
         CLParser<JOptions> clParser = new CLParser<>();
 
         //临时初始化
-        new JOptions().Register();
+        JOptions jOptions = new JOptions();
+        jOptions.Register();
 
         clParser.Create((JOptions) JOptions.GetInstance(), args)
                 .WithNoParsed(error->{
@@ -25,15 +32,23 @@ public class Init {
                     World.Instance().AddSingleton(o);
                 }).Parse();
 
+        NLog nLog = new NLog(jOptions.appType.name(), jOptions.process, 0, "../Config/NLog/NLog.config");
+        World.Instance().AddSingleton(Logger.class).SetLog(nLog);
+        //TODO ETTask
+
+        World.Instance().AddSingleton(TimeInfo.class);
+        World.Instance().AddSingleton(FiberManager.class);
+        World.Instance().AddSingleton(CodeLoader.class);
     }
 
     public void Update()
     {
-
+        ((TimeInfo)TimeInfo.GetInstance()).Update();
+        ((FiberManager)FiberManager.GetInstance()).Update();
     }
 
     public void LateUpdate()
     {
-
+        ((FiberManager)FiberManager.GetInstance()).LateUpdate();
     }
 }
